@@ -66,6 +66,7 @@ Control, and Robotics</p>
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="assets/img/portfolio/LOGO_large-05.jpg" alt="Lab 1"/>
+                            <h5 class = "text-center">Lab 1</h5>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
@@ -123,7 +124,7 @@ Control, and Robotics</p>
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Lab 1</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Lab 1: The Artemis Board and Bluetooth</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -132,7 +133,158 @@ Control, and Robotics</p>
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/LOGO_large-05.jpg" alt="Lab 1"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <h3>Objective</h3>
+                                    <p class="modal-body text-left">The goal of Part I of the lab was to install Arudino IDE and created required Virtual envionment settings. Tested the built-in
+                                        Arduino script examples to verify the functionlity of the Artemis board. In Part II, by introudcing Bluetooth Low Energy(BLE), the Artemis board
+                                        was able to establish a communication channel with the computer including sending, receving information. Jupyter Notebook was operated 
+                                        on the pc end and Arduino code was operated on the Artemis board end. The board advertised the MAC address and Universal Uniqle Identified(uuid) to
+                                        make the connection with the computer. 
+                                    </p>
+                                    <h2 class = "text-center">Part A: Arduino Basics</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Example 1: Blink it Up</h3>
+                                    <p class = "modal-body text-left">Tested the built-in LED on the Artemis board by using Blink-it-Up sketch from the exmaple files</p>
+                                    <div class = "embed-container">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BNR9n2o8qbI?si=80HSq0oQf8iMoWvr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Example 2: Serial Output</h3>
+                                    <p class="modal-body text-left">In this task, the board successfully transmitted the messages through the Serial port. It generates echo output based on the user inputs.</p>
+                                    <img class = "img-fluid img-cetered" src="assets/img/portfolio/SerialPort.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Example 3: Analog Read</h3>
+                                    <P class = "modal-body text-left">This task demonstrated the changing of temperature measured by the built-in temperature sensor. The reading values used the analog pin.
+                                        There are temperature fluctuation when the board was touched by fingers. 
+                                    </P>
+                                    <img class = "img-fluid img-cetered" src="assets/img/portfolio/AnalogRead.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center"> Example 4: </h3>
+                                    <p class = "modal-body text-left">In this example, the built-in microphone output was operating to constantly to detect the frequency of the sound in real-time using FFT.
+                                         The captured loudest frequencies are shown in the picture </p>
+                                    <img class = "img-fluid img-cetered" src = "assets/img/portfolio/MicOutput.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class="text-center">5000-Level Extra Task: Note A Tuner</h3>
+                                    <p class="modal-body text-left">Besides testing the output of the loudest frequencies, by introducing an if statement,
+                                        the Artemis board was able to turn the LED on when Note A was played. The frequencies of Note A are 440Hz and 880Hz. 
+                                        A plus/minus 10Hz range was implemented to have some error tolerance.
+                                    </p>
+                                    <img class = "img-fluid img-cetered" src = "assets/img/portfolio/NoteA.png" alt = "">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h2 class = "text-center">Part B: Bluetooth Low Energy(BLE) Communication</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Prelab Setup</h3>
+                                    <p class = "modal-body text-left">In order to operate the Bluetooth Low Energy Peripheral, the python vesion 
+                                        was checked and updated. A virtual environment was established to have an independent workspace. A codebase was downloaded
+                                        and placed in the virtual envionment directory. The virtual environment was activated and Jupyter Notebook was initialized
+                                        from the terminal. In Arduino IDE, the required BLE libraries were installed and the base sketch was uploaded to the Artemis 
+                                        board. In the Serial Monitor, the board's MAC address was shown below. 
+                                    </p>
+                                    <img class = "img-fluid img-cetered" src = "assets/img/portfolio/MACAddr.png" alt = "">
+                                    <p class = "modal-body text-left"> In addition, the board's MAC address was copied and pasted to the connection.yaml file in the Jupyter
+                                        Notebook end. Besides MAC address, an universal uniqle identification(UUID) was generated and changed correspondingly in the connection.yaml file.
+                                        Both settings guaranteed the board did not connect to the other boards and establish the connection via Bluetooth with the computer. 
+                                    </p>
+                                    <img class = "img-fluid  img-cetered" src = "assets/img/portfolio/Connection.png"  alt="">
+                                    <img class = "img-cetered img-fluid" src = "assets/img/portfolio/UUIDs.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Task 1: ECHO</h3>
+                                    <p class = "modal-body text-left">In this task, the function of ECHO command enabled the board to send the same string with appended contents "Robot says->" back to the computer after the string was sent from the computer.
+                                        The string was sent from the Jupyter Notebook using Python and the sendcommand was deployed. The ECHO command was developed in the Arduino IDE. </p>
+                                    <img class="img-fluid img-cetered" src = "assets/img/portfolio/Task1Arduino.png" alt="">
+                                    <img class="img-fluid img-cetered" src = "assets/img/portfolio/Task1Python.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Task 2: GET_TIME_MILLIS</h3>
+                                    <p class = "modal-body text-left">This command assisted the user to collect the time data from the board. The function get.milli() was used in the Arudino to generated the time value.
+                                        The value was then sent back to the computer as a string variable and printed in the Jupyter Notebook
+                                    </p>
+                                    <img class="img-fluid img-cetered" src = "assets/img/portfolio/Task2Ardu.png" alt="">
+                                    <img class="img-fluid img-cetered" src = "assets/img/portfolio/Task2Py.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Task 3: Notification Handler</h3>
+                                    <p class = "modal-body text-left">A notification handler function was defined below. It was set as a callback function that operated in the background. When the board sent a message, 
+                                        the notification handler would receive the data and print it. Therefore, the ble.receive method would be replaced by the notification handler since the handler was able to receive board's messages automatically.
+                                    <img class="img-fluid img-cetered" src = "assets/img/portfolio/Task3Py.png" alt="">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center"> Task 4: LOOP</h3>
+                                    <p class = "modal-body text-left">In this task, the goal was receving the time data from the board immediatedly in a certain amount of time and used notification handler to process the time collection and print the time values. As shown in the video below,
+                                        when the board generated the time data, the notification handler printed the value synchronously. In the video, there were 211 time values recevied by the computer in 5 seconds. The datarate was 42.2 data per second.  
+                                    </p>
+                                    <DIV class="embed-container"
+                                    ><iframe width="560" height="315" src="https://www.youtube.com/embed/YuZak8ejJ6Q?si=_veeumB4lgEfrI0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </DIV>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center"> Task 5: Time Stamp Array</h3>
+                                    <p class = "modal-body text-left">In this section, the time stamp value was stored in an array using STORE_TIME_DATA command in the Arudino IDE first and then operated the SEND_TIME_DATA command to push all the time array elements to the computer via notification handler. 
+                                        The whole process divided the time value communication process into two sectors: data generation and data transimission.</p>
+                                    <div class = "embed-container"
+                                    ><iframe width="560" height="315" src="https://www.youtube.com/embed/YuZak8ejJ6Q?si=-Nvjk0q1ME6jdrN5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Task 6: GET_TEMP_READINGS</h3>
+                                    <p class = "modal-body text-left">Additionally, the temperature data was required to collect at each time stamp. The built-in getTempDegC() function was implemented to provide the temperature value in Celsius. There were two arrays in the GET_TIME_TEMP command.
+                                         After compeleting the collection process, the two arrays were sent back to the computer as a list of strings. It was seperated via split() method in Python to extract the time and temperature information and displayed the values. 
+                                   <div class = "embed-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HBEstZQRH6I?si=LVgcXYXNWsuceoVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                   </div>
+                                   <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Task 7: Comparision</h3>
+                                    <p class = "modal-body text-left">
+                                        The major difference between the two methods is the transimission strcture. In task 4, time data generation and transimission occurred at the same process. 
+                                        In task 5, the time data was collected and stored in an array and implemented another command to transmit each element to the computer. The advantage of the second method is that
+                                        it reduces the delay for the string transmission during the generation process, which improve the data rate performance. The disadvantage of the array method was a fixed delay between each time 
+                                        acquisition was required to avoid repeating values. 
+                                        The Artimes has 384kB RAM.</p>
+                                    <p class = "modal-body text-center">Convert the RAM capacity to bytes (1 kB = 1024 bytes):
+                                    384 kB * 1024 bytes/kB = 393,216 bytes  
+                                        
+                                    Divide the total RAM capacity by the size of each data point:  
+                                    93,216 bytes / 1 byte/character = 393,216 characters   
+                                    </p>     
+                                    
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class = "text-center">Additional Task for 5000 5000-Level</h3>
+                                    <p class = "modal-body text-left">
+                                        In order to have a visualized information about the relation between data rate and data size, a command TEST_DATARATE was developed. It simply returned the recevied Bytes to the computer.
+                                        The computer had two timers: startTime and endTime. A range from 0 to 120 Bytes with 10 Bytes increment test list was created to generated the results for the data visualization. The graph is shown below.
+                                        Based on the graph, overall the data rate has a positive relation with the datasize. Therefore, larger datasize can reduce the overhead with the RAM constraints. 
+                                    </p>
+                                    <img class = "img-fluid img-cetered" src = "assets/img/portfolio/Task7Plot.png" alt="">
+                                    <h3 class = "text-center">Reliability Discussion</h3>
+
+                                    <p class = "modal-body text-left">
+                                        According to the Task 4 video, the time values and the number of values collected were the same and there were no missing values based on the comparision between computer output and the Serial monitor. 
+                                        The reliability of the data transimission from the Artemis board to the computer was confirmed. 
+                                    </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
